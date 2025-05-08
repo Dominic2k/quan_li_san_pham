@@ -1,0 +1,41 @@
+{
+  "name": "websp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "json-server": "^0.15.1",
+    "react": "^18.3.1",
+    "react-datepicker": "^2.9.6",
+    "react-dom": "^18.3.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^5.4.0",
+    "redux": "^4.0.4",
+    "webpack": "^5.99.8",
+    "websp": "file:"
+  },
+  "scripts": {
+    "start": "set PORT=3000 &&react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "json-server --watch server/callApi/db.json --port 3001"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

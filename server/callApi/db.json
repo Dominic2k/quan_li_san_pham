@@ -1,0 +1,265 @@
+{
+  "products": [
+    {
+      "name": "Doughnuts VTC",
+      "price": "15",
+      "image": "/images/1434429117-banh-su-kem-chien-20.jpg",
+      "color": "Hồng bánh kem",
+      "name_category": "sản phẩm hot",
+      "material": "Bánh và trứng",
+      "expiry_date": "3 ngày",
+      "origin": "Đà Nẵng",
+      "description": "Dành cho những người đói bụng",
+      "tinhtranghang": true,
+      "id": "3"
+    },
+    {
+      "name": "Bánh Tiramisu Italia",
+      "price": "36",
+      "image": "/images/banhbonglantrungmuoi.jpg",
+      "color": "Hồng bánh kem",
+      "name_category": "sản phẩm mới",
+      "material": "Bánh và trứng",
+      "expiry_date": "3 ngày",
+      "origin": "Italia",
+      "description": "Dành cho những người đói bụng",
+      "tinhtranghang": true,
+      "id": "4"
+    },
+    {
+      "name": "Bánh Macaron Pháp",
+      "price": "50",
+      "image": "/images/1430967449-pancake-sau-rieng-6.jpg",
+      "color": "Hồng bánh kem",
+      "name_category": "sản phẩm khuyến mãi",
+      "material": "Bánh và trứng",
+      "expiry_date": "2019-11-24",
+      "origin": "Pháp",
+      "description": "Dành cho những người đói bụng",
+      "tinhtranghang": false,
+      "id": "5"
+    },
+    {
+      "name": "Bánh Tapioca Brazil",
+      "price": "20",
+      "image": "/images/Fruit-Cake_7979.jpg",
+      "color": "Hồng bánh kem",
+      "name_category": "sản phẩm hot",
+      "material": "Bánh và trứng",
+      "expiry_date": "2020-03-21",
+      "origin": "Brazil",
+      "description": "Dành cho những người đói bụng",
+      "tinhtranghang": true,
+      "id": "gg"
+    },
+    {
+      "name": "Bánh táo Mỹ",
+      "price": "80",
+      "image": "/images/banh-mi-nhan-man.jpg",
+      "color": "Hồng",
+      "name_category": "sản phẩm mới",
+      "material": "Từ thiên nhiên",
+      "expiry_date": "trong ngày",
+      "origin": "Mỹ nhưng làm tại Việt Nam",
+      "description": "Ngon và mềm chống đói bụng",
+      "tinhtranghang": false,
+      "id": "UiWAkWH"
+    },
+    {
+      "name": "Bánh Gateau St. Honore",
+      "price": "25,6",
+      "image": "/images/saurieng-dua.jpg",
+      "color": "Hồng",
+      "name_category": "sản phẩm khuyến mãi",
+      "material": "Từ thiên nhiên",
+      "expiry_date": "2019-11-10",
+      "origin": "Quãng Nam",
+      "description": "Bánh ngon lắm",
+      "tinhtranghang": false,
+      "id": "zVCXZab"
+    },
+    {
+      "name": "Bánh Nếp",
+      "price": "30",
+      "image": "/images/banhbonglantrung.jpg",
+      "color": "Hồng",
+      "name_category": "sản phẩm khuyến mãi",
+      "material": "Từ thiên nhiên",
+      "expiry_date": "2019-11-16",
+      "origin": "Đà Nẵng",
+      "description": "Bánh ngon lắm",
+      "tinhtranghang": true,
+      "id": "pfzc5z3"
+    },
+    {
+      "name": "QUICK BREAD – BÁNH MÌ NHANH",
+      "price": "13",
+      "image": "/images/50020041-combo-20-banh-su-que-pho-mai-9.jpg",
+      "color": "Xám cháy",
+      "name_category": "sản phẩm hot",
+      "material": "Bột mỳ và trứng, mè đậu phộng",
+      "expiry_date": "2019-11-24",
+      "origin": "Việt Nam",
+      "description": "Là loại bánh mỳ hảo hạn",
+      "tinhtranghang": true,
+      "id": "MM0kH3h"
+    },
+    {
+      "name": "Bánh PVT",
+      "price": "24",
+      "image": "/images/crepedau.jpg",
+      "color": "Đỏ hồng",
+      "name_category": "sản phẩm khuyến mãi",
+      "material": "Nhà làm ",
+      "expiry_date": "2020-02-14",
+      "origin": "ĐăkLăk",
+      "description": "Bánh ngon bổ rẻ mà lại an toàn",
+      "tinhtranghang": true,
+      "id": "uccIyXa"
+    },
+    {
+      "name": "Bánh Gato mặn",
+      "price": "50",
+      "image": "/images/dung-khoai-tay-lam-banh-gato-man-cuc-ngon.jpg",
+      "color": "Màu hồng kem",
+      "name_category": "sản phẩm hot",
+      "material": "Trứng bơ sữa bột đường yến mạch",
+      "expiry_date": "2019-11-23",
+      "origin": "Quãng Nam",
+      "description": "Bánh ngon",
+      "tinhtranghang": false,
+      "id": "CMO5Rpk"
+    },
+    {
+      "name": "Test 1",
+      "price": "30",
+      "image": "/images/234.jpg",
+      "color": "vang ",
+      "name_category": "sản phẩm hot",
+      "material": "bot gao",
+      "expiry_date": "2019-11-14",
+      "origin": "Viet Nam",
+      "description": "banh ",
+      "tinhtranghang": true,
+      "id": "k9oH2-9"
+    },
+    {
+      "name": "Thong",
+      "price": "70",
+      "image": "/images/banhkem-dau.jpg",
+      "color": "Hồng",
+      "name_category": "sản phẩm mới",
+      "material": "Bánh trứng",
+      "expiry_date": "2019-11-02",
+      "origin": "Viet Nam",
+      "description": "Adidas UltraBOOST",
+      "tinhtranghang": false,
+      "id": "aQGFi-p"
+    },
+    {
+      "name": "bánh ý",
+      "price": "90",
+      "image": "/images/544bc48782741.png",
+      "color": "vàng",
+      "name_category": "sản phẩm mới",
+      "material": "Bánh trứng",
+      "expiry_date": "2019-11-06",
+      "origin": "Viet Nam",
+      "description": "bánh ngon",
+      "tinhtranghang": true,
+      "id": "5V-ghxy"
+    },
+    {
+      "name": "Ao thun 3 lỗ- VTC",
+      "price": "200000",
+      "image": "/images/banner3.jpg",
+      "color": "Blue",
+      "name_category": "sản phẩm hot",
+      "material": "Bột nguyên chất",
+      "expiry_date": "2023-04-13",
+      "origin": "VTC",
+      "description": "bánh ngon ",
+      "tinhtranghang": true,
+      "id": "1zPLb6X"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "tendm": "sản phẩm mới"
+    },
+    {
+      "id": "2",
+      "tendm": "sản phẩm hot"
+    },
+    {
+      "id": "3",
+      "tendm": "sản phẩm khuyến mãi"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Thông Phan",
+      "email": "thong38676@donga.edu.vn",
+      "messages": "Cảm ơn đã giới thiệu cho tôi những loại thực phẩm tuyệt vời",
+      "status": ""
+    },
+    {
+      "name": "Hoàng Đạt",
+      "email": "datcho@gmail.com",
+      "messages": "Test chức năng tạo phản hồi",
+      "id": "zakHs3d",
+      "status": "xn"
+    },
+    {
+      "name": "Anh Đào",
+      "email": "daopro_cutephomaique@gmail.com",
+      "messages": "Hello Tất cả ban quản trị Shop Cake",
+      "status": "abc",
+      "id": "dfbdgBS"
+    },
+    {
+      "name": "Vương Trịnh",
+      "email": "vuongtrinh@gmail.com",
+      "messages": "Shop giới thiệu bánh chất v~ @@",
+      "status": "false",
+      "id": "lHADWqG"
+    },
+    {
+      "name": "dat hoang",
+      "email": "huynhtanhoangdat48@gmail.com",
+      "messages": "abcxyz",
+      "status": "",
+      "id": "ko2SB1B"
+    },
+    {
+      "name": "Vuong",
+      "email": "vuong@gmail.com",
+      "messages": "Test Contact",
+      "status": "",
+      "id": "E_9V6OU"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin"
+    },
+    {
+      "username": "DatPham",
+      "email": "pddat2602@gmail.com",
+      "password": "1111111111",
+      "id": "NuzXmbF"
+    }
+  ],
+  "orders": [
+    {
+      "name": "1",
+      "email": "sản phẩm mới",
+      "messages": "sản phẩm mới"
+    }
+  ]
+}
