@@ -21,12 +21,15 @@ function Add(props) {
         tinhtranghang: true,
     });
     
+    const [isEditing, setIsEditing] = useState(false);
     const imageRef = useRef();
     
     useEffect(() => {
         const { match } = props;
         if (match) {
             const id = match.params.id;
+            setIsEditing(true);
+            
             axios({
                 method: 'GET',
                 url: `http://localhost:3001/products/${id}`,
@@ -49,6 +52,8 @@ function Add(props) {
             }).catch(err => {
                 console.log(err);
             });
+        } else {
+            setIsEditing(false);
         }
     }, [props.match]);
 
@@ -78,10 +83,39 @@ function Add(props) {
             expiry_date, origin, description, tinhtranghang } = product;
         const { history } = props;
         
+        // Validate required fields
+        if (!name || !price || (!isEditing && !image) || !material || !expiry_date) {
+            toast.warn("Vui lòng nhập đủ nội dung");
+            return;
+        }
+        
         if (id) {
             axios({
                 method: 'PUT',
-                url: `http://localhost:3000/products/${id}`,
+                url: `http://localhost:3001/products/${id}`,
+                data: {
+                    name: name,
+                    price: price,
+                    image: image, // Keep the existing image path
+                    color: color,
+                    name_category: name_category,
+                    material: material,
+                    expiry_date: expiry_date,
+                    origin: origin,
+                    description: description,
+                    tinhtranghang: tinhtranghang,
+                }
+            }).then(res => {
+                toast.success("Cập nhật sản phẩm thành công");
+                history.goBack();
+            }).catch(err => {
+                console.log(err);
+                toast.error("Cập nhật sản phẩm thất bại");
+            });
+        } else {
+            axios({
+                method: 'POST',
+                url: 'http://localhost:3001/products',
                 data: {
                     name: name,
                     price: price,
@@ -95,33 +129,12 @@ function Add(props) {
                     tinhtranghang: tinhtranghang,
                 }
             }).then(res => {
-                toast.success("Cập nhật sản phẩm thành công");
+                toast.success("Thêm sản phẩm thành công");
                 history.goBack();
+            }).catch(err => {
+                console.log(err);
+                toast.error("Thêm sản phẩm thất bại");
             });
-        } else {
-            if (name === '' && price === '' && image === '' && material === '' && expiry_date === '') {
-                toast.warn("Vui lòng nhập đủ nội dung");
-            } else {
-                axios({
-                    method: 'POST',
-                    url: 'http://localhost:3000/products',
-                    data: {
-                        name: name,
-                        price: price,
-                        image: image,
-                        color: color,
-                        name_category: name_category,
-                        material: material,
-                        expiry_date: expiry_date,
-                        origin: origin,
-                        description: description,
-                        tinhtranghang: tinhtranghang,
-                    }
-                }).then(res => {
-                    toast.success("Thêm sản phẩm thành công");
-                    history.goBack();
-                });
-            }
         }
     };
 
@@ -138,6 +151,9 @@ function Add(props) {
             description: '',
             tinhtranghang: true,
         });
+        if (imageRef.current) {
+            imageRef.current.value = '';
+        }
     };
 
     return (
@@ -160,10 +176,22 @@ function Add(props) {
                                                 <label>Giá Sản phẩm ($) :</label>
                                                 <input type="number" name="price" value={product.price} onChange={onChange} className="form-control" />
                                             </div>
-                                            <div className="form-group">
-                                                <label>Chọn Ảnh :</label>
-                                                <input type="file" name="image" ref={imageRef} onChange={onChange} className="form-control" />
-                                            </div>
+                                            
+                                            {isEditing ? (
+                                                <div className="form-group">
+                                                    <label>Ảnh hiện tại:</label>
+                                                    <div>
+                                                        <img src={product.image} alt="Product" style={{ maxWidth: '200px', maxHeight: '200px' }} />
+                                                        <p className="text-muted mt-2">Không thể thay đổi ảnh khi cập nhật sản phẩm</p>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <div className="form-group">
+                                                    <label>Chọn Ảnh :</label>
+                                                    <input type="file" name="image" ref={imageRef} onChange={onChange} className="form-control" />
+                                                </div>
+                                            )}
+                                            
                                             <label>Loại sản phẩm:</label>
                                             <select className="form-control" name="name_category" value={product.name_category} onChange={onChange} required="required">
                                                 <option value="sản phẩm mới">mới</option>
@@ -214,3 +242,5 @@ function Add(props) {
 }
 
 export default Add;
+
+

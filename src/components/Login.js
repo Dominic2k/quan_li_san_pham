@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './layout_page/Header.js';
 import Footer from './layout_page/Footer.js';
@@ -6,14 +6,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Redirect, NavLink } from 'react-router-dom';
 
-function Login(props) {
+function Login() {
   const [user, setUser] = useState({
     username: '',
     password: '',
-    loggedIn: false
+    loggedIn: false,
+    isAdmin: false
   });
-
-  const { isAdmin } = props;
 
   const onChange = (event) => {
     const { name, value } = event.target;
@@ -33,15 +32,14 @@ function Login(props) {
     }
 
     // Admin login
-    if (isAdmin) {
-      if (username === 'admin' && password === 'admin') {
-        setUser({ ...user, loggedIn: true });
-        localStorage.setItem('username', username);
-        localStorage.setItem('isAdmin', 'true');
-        toast.success("Đăng nhập thành công!");
-      } else {
-        toast.error("Sai tên đăng nhập hoặc mật khẩu!");
-      }
+    if (username === 'admin' && password === 'admin') {
+      localStorage.setItem('username', username);
+      localStorage.setItem('isAdmin', 'true');
+      toast.success("Đăng nhập admin thành công!");
+
+      setTimeout(() => {
+        setUser({ ...user, loggedIn: true, isAdmin: true });
+      }, 1000);
     } 
     // User login
     else {
@@ -49,12 +47,15 @@ function Login(props) {
         .then(res => {
           const users = res.data;
           const foundUser = users.find(u => u.username === username && u.password === password);
-          
+
           if (foundUser) {
-            setUser({ ...user, loggedIn: true });
             localStorage.setItem('username', username);
             localStorage.setItem('isAdmin', 'false');
-            toast.success("Đăng nhập thành công!");
+            toast.success("Đăng nhập người dùng thành công!");
+
+            setTimeout(() => {
+              setUser({ ...user, loggedIn: true, isAdmin: false });
+            }, 1000);
           } else {
             toast.error("Sai tên đăng nhập hoặc mật khẩu!");
           }
@@ -66,8 +67,15 @@ function Login(props) {
     }
   };
 
+  // Redirect logic
   if (user.loggedIn) {
-    return <Redirect to="/product-list" />;
+    if (user.isAdmin) {
+      console.log("Redirecting to admin product list");
+      return <Redirect to="/product-list" />;
+    } else {
+      console.log("Redirecting to home page");
+      return <Redirect to="/" />;
+    }
   }
 
   return (
@@ -79,9 +87,9 @@ function Login(props) {
             <div className="row">
               <div className="col-sm-3" />
               <div className="col-sm-6">
-                <h4>{isAdmin ? 'Đăng nhập Admin' : 'Đăng nhập'}</h4>
+                <h4>Đăng nhập</h4>
                 <div className="space20">&nbsp;</div>
-                
+
                 <div className="form-block">
                   <label htmlFor="username">Tên đăng nhập*</label>
                   <input 
@@ -93,7 +101,7 @@ function Login(props) {
                     required 
                   />
                 </div>
-                
+
                 <div className="form-block">
                   <label htmlFor="password">Mật khẩu*</label>
                   <input 
@@ -105,12 +113,12 @@ function Login(props) {
                     required 
                   />
                 </div>
-                
+
                 <div className="form-block">
                   <button type="submit" className="btn btn-primary">Đăng nhập</button>
                 </div>
-                
-                {!isAdmin && (
+
+                {!user.isAdmin && (
                   <div className="form-block">
                     <p>Chưa có tài khoản? <NavLink to="/register">Đăng ký ngay</NavLink></p>
                   </div>
@@ -119,7 +127,7 @@ function Login(props) {
               <div className="col-sm-3" />
             </div>
           </form>
-        </div> {/* #content */}
+        </div>
       </div>
       <Footer />
       <ToastContainer />

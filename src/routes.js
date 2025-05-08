@@ -25,7 +25,7 @@ const routes = [
 	{
 		path : '/login',
 		exact : true,
-		main : ({history})=> <Login history={history} />
+		main : ({history})=> <Login history={history} isAdmin={false} />
 	},
 	{
 		path : '/register',
@@ -50,12 +50,12 @@ const routes = [
 	{
 		path : '/contacts/:id/contactdetail',
 		exact : true,
-		main : ({match})=> <ContactDetail match ={match}/>
+		main : ({match})=> <ContactDetail match={match}/>
 	},
 	{
 		path : '/products/:id/productdetail',
 		exact : true,
-		main : ({match})=> <ProductDetail  match ={match}/>
+		main : ({match})=> <ProductDetail match={match}/>
 	},
 	{
 		path : '/add',
@@ -65,12 +65,12 @@ const routes = [
 	{
 		path : '/products/:id/edit',
 		exact : true,
-		main : ({match , history})=> <Add  match ={match} history={history}/>
+		main : ({match, history})=> <Add match={match} history={history}/>
 	},
 	{
 		path : '/contacts/:id/confirm',
 		exact : true,
-		main : ({match , history})=> <Confirm  match ={match} history={history}/>
+		main : ({match, history})=> <Confirm match={match} history={history}/>
 	},
 	{
 		path : '/contact',
@@ -85,22 +85,22 @@ const routes = [
 	{
 		path : '/sanphamhot',
 		exact : true,
-		main : ({match})=> <SanPhamHot match ={match}/>
+		main : ({match})=> <SanPhamHot match={match}/>
 	},
 	{
 		path : '/sanphamkhuyenmai',
 		exact : true,
-		main : ({match})=> <SanPhamKhuyenMai match ={match}/>
+		main : ({match})=> <SanPhamKhuyenMai match={match}/>
 	},
 	{
 		path : '/sanphammoi',
 		exact : true,
-		main : ({match})=> <SanPhamMoi match ={match}/>
+		main : ({match})=> <SanPhamMoi match={match}/>
 	},
 	{
 		path : '/products/:id/prodetailadmin',
 		exact : true,
-		main : ({match})=> <ProDetailAdmin match ={match}/>
+		main : ({match})=> <ProDetailAdmin match={match}/>
 	},
 	{
 		path : '',
@@ -111,3 +111,4 @@ const routes = [
 
 
 export default routes;
+

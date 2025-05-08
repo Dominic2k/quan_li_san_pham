@@ -1,28 +1,15 @@
 {
   "products": [
     {
-      "name": "Doughnuts VTC",
-      "price": "15",
-      "image": "/images/1434429117-banh-su-kem-chien-20.jpg",
-      "color": "Hồng bánh kem",
-      "name_category": "sản phẩm hot",
-      "material": "Bánh và trứng",
-      "expiry_date": "3 ngày",
-      "origin": "Đà Nẵng",
-      "description": "Dành cho những người đói bụng",
-      "tinhtranghang": true,
-      "id": "3"
-    },
-    {
-      "name": "Bánh Tiramisu Italia",
-      "price": "36",
+      "name": "Bánh Tiramisu Italia ",
+      "price": "100",
       "image": "/images/banhbonglantrungmuoi.jpg",
       "color": "Hồng bánh kem",
       "name_category": "sản phẩm mới",
       "material": "Bánh và trứng",
       "expiry_date": "3 ngày",
       "origin": "Italia",
-      "description": "Dành cho những người đói bụng",
+      "description": "Dành cho những người đói bụng như Pham Dat",
       "tinhtranghang": true,
       "id": "4"
     },
@@ -253,6 +240,12 @@
       "email": "pddat2602@gmail.com",
       "password": "1111111111",
       "id": "NuzXmbF"
+    },
+    {
+      "username": "PhamDat",
+      "email": "pddat2602@gmail.com",
+      "password": "2222222222",
+      "id": "E3QuZyu"
     }
   ],
   "orders": [

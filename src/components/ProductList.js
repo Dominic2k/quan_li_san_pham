@@ -34,7 +34,7 @@ class ProductList extends Component {
       var {products} = this.state;
        axios({
         method: 'DELETE',
-        url :`http://localhost:3000/products/${id}`,
+        url :`http://localhost:3001/products/${id}`,
         data : null
       }).then(res =>{
           if (res.status ===  200) {
