@@ -7,10 +7,10 @@
       "color": "Hồng bánh kem",
       "name_category": "sản phẩm mới",
       "material": "Bánh và trứng",
-      "expiry_date": "3 ngày",
+      "expiry_date": "2025-05-22",
       "origin": "Italia",
       "description": "Dành cho những người đói bụng như Pham Dat",
-      "tinhtranghang": true,
+      "tinhtranghang": false,
       "id": "4"
     },
     {
@@ -246,6 +246,18 @@
       "email": "pddat2602@gmail.com",
       "password": "2222222222",
       "id": "E3QuZyu"
+    },
+    {
+      "username": "DatDat",
+      "email": "pddat2602@gmail.com",
+      "password": "2222222222",
+      "id": "hlFjOxR"
+    },
+    {
+      "username": "DatNguyen",
+      "email": "datnguyen@gmail.com",
+      "password": "123454321",
+      "id": "4szoLR_"
     }
   ],
   "orders": [
