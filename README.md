@@ -14,3 +14,6 @@ Thực hiện:
 		, hãy bấm Y để đổi cổng và đợi server khởi động
 	b5: nếu node modules của bạn chưa có các thư viện cần thiết để chạy bài như react-router-dom, axios, toastify, react-script..
 	    thì bạn hãy chạy lệnh npm install + tên thư viện cần cài cho project, sau dó chạy lệnh npm start để chạy chương trình bình thường
+
+Chạy giao diện với lệnh: npm start
+Chạy server với lệnh: npm run server
